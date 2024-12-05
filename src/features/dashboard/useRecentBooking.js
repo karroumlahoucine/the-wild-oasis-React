@@ -10,6 +10,7 @@ export function useRecentBooking() {
     ? Number(searchParams.get("last"))
     : 7;
 
+  // IT WILL GET THE EXACT SAME DAY WITH THE TIME OF YOUR REQUEST
   const queryDate = subDays(new Date(), numDays).toISOString();
 
   const { data: bookings, isLoading } = useQuery({

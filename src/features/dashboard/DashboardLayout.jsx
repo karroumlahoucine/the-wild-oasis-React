@@ -16,15 +16,15 @@ const StyledDashboardLayout = styled.div`
 `;
 
 function DashboardLayout() {
-  const { bookings, isLoading: isLoading1, numDays } = useRecentBooking();
-  const { isLoading: isLoading2, confirmedStays } = useRecentStays();
-  const { cabins, isLoading: isLoading3 } = useCabins();
+  const { bookings, isLoading: isLoading1, numDays } = useRecentBooking(); //we get bookings from the last X days to now  7 is default
+  const { isLoading: isLoading2, confirmedStays } = useRecentStays(); // they are bookings that are checked in or checked out
+  const { cabins, isLoading: isLoading3 } = useCabins(); // we get all cabins
   if (isLoading1 || isLoading2 || isLoading3) return <Spinner />;
   return (
     <StyledDashboardLayout>
       <Stats
         cabinCount={cabins.length}
-        numDays={numDays}
+        numDays={numDays} //last X days
         bookings={bookings}
         confirmedStays={confirmedStays}
       />

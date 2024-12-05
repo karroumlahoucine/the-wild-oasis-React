@@ -115,14 +115,11 @@ const startDataDark = [
 ];
 
 function prepareData(startData, stays) {
-  // A bit ugly code, but sometimes this is what it takes when working with real data 😅
-
   function incArrayValue(arr, field) {
     return arr.map((obj) =>
       obj.duration === field ? { ...obj, value: obj.value + 1 } : obj
     );
   }
-
   const data = stays
     .reduce((arr, cur) => {
       const num = cur.numNights;
@@ -135,7 +132,7 @@ function prepareData(startData, stays) {
       if (num >= 15 && num <= 21) return incArrayValue(arr, "15-21 nights");
       if (num >= 21) return incArrayValue(arr, "21+ nights");
       return arr;
-    }, startData)
+    }, startData) // this will return an updated startData with incremented values
     .filter((obj) => obj.value > 0);
 
   return data;
@@ -165,6 +162,7 @@ function DurationChart({ confirmedStays }) {
             ))}
           </Pie>
           <Tooltip />
+          {/* shows detailed information about the slice (e.g., its name and value). */}
           <Legend
             verticalAlign="middle"
             align="right"

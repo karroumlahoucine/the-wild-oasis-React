@@ -83,6 +83,7 @@ function SalesChart({ numDays, bookings }) {
               backgroundColor: colors.background,
             }}
           />
+
           <Area
             dataKey="totalSales"
             type="monotone"
