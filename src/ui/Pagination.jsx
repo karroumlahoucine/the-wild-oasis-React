@@ -81,6 +81,7 @@ function Pagination({ count }) {
     searchParams.set("page", prev);
     setSearchParams(searchParams);
   }
+
   if (pageCount <= 1) return null;
 
   return (

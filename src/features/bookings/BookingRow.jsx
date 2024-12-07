@@ -50,7 +50,7 @@ function BookingRow({
   booking: {
     id: bookingId,
     created_at,
-    startDate,
+    startDate: start,
     endDate,
     numNights,
     numGuests,
@@ -68,6 +68,8 @@ function BookingRow({
   const { checkout, isCheckingOut } = useCheckout();
   const { isDeleting, deleteBooking } = useDeleteBooking();
   const navigate = useNavigate();
+
+  const startDate = start + "Z";
 
   return (
     <Table.Row>
