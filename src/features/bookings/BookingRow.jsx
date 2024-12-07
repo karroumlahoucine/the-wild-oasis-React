@@ -51,7 +51,7 @@ function BookingRow({
     id: bookingId,
     created_at,
     startDate: start,
-    endDate,
+    endDate: end,
     numNights,
     numGuests,
     totalPrice,
@@ -70,6 +70,7 @@ function BookingRow({
   const navigate = useNavigate();
 
   const startDate = start + "Z";
+  const endDate = end + "Z";
 
   return (
     <Table.Row>

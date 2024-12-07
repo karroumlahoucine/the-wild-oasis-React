@@ -15,6 +15,7 @@ import Checkbox from "../../ui/Checkbox";
 import { formatCurrency } from "../../utils/helpers";
 import { useCheckin } from "./useCheckin";
 import { useSettings } from "../settings/useSettings";
+import { isToday } from "date-fns";
 
 const Box = styled.div`
   /* Box */
@@ -43,10 +44,11 @@ function CheckinBooking() {
     totalPrice,
     numGuests,
     hasBreakfast,
+    startDate: start,
     isPaid,
     numNights,
   } = booking;
-
+  const isCheckinToday = isToday(new Date(start + "Z"));
   const optionalBreakfastPrice =
     settings.breakFastPrice * numNights * numGuests;
 
@@ -109,9 +111,14 @@ function CheckinBooking() {
       </Box>
 
       <ButtonGroup>
-        <Button onClick={handleCheckin} disabled={!confirmPaid || isCheckingIn}>
-          Check in booking #{bookingId}
-        </Button>
+        {isCheckinToday && (
+          <Button
+            onClick={handleCheckin}
+            disabled={!confirmPaid || isCheckingIn}
+          >
+            Check in booking #{bookingId}
+          </Button>
+        )}
         <Button variation="secondary" onClick={moveBack}>
           Back
         </Button>
