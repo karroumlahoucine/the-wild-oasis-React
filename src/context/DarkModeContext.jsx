@@ -4,8 +4,9 @@ import { useLocalStorageState } from "../hooks/useLocalStorageState";
 const DarkModeContext = createContext();
 
 function DarkModeProvider({ children }) {
+  // this custom hook take an initial state with a key if it is already in the local storage is going to use that value otherwise it uses the given one
   const [isDarkMode, setIsDarkMode] = useLocalStorageState(
-    window.matchMedia("(prefers-color-schema:dark)").matches,
+    window.matchMedia("(prefers-color-schema:dark)").matches, // this reads the user's system preference for dark mode
     "isDarkMode"
   );
 
