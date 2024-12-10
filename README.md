@@ -1,4 +1,4 @@
-### **Cabin Management Web App 🚀**
+# **Cabin Management Web App 🚀**
 
 This is a modern cabin management web app built using React, styled-components, React Router, and Supabase, designed exclusively for cabin staff. The app provides cabin administrators with a seamless interface to manage cabins, bookings, and guest-related operations efficiently.
 
