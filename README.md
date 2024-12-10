@@ -6,7 +6,7 @@ I built this project to deepen my understanding of building feature-rich admin p
 
 ---
 
-### **⚡ Key Features**
+## **⚡ Key Features**
 
 #### **User Management**
 
@@ -14,7 +14,7 @@ I built this project to deepen my understanding of building feature-rich admin p
 - **User Sign-Up**: New users can be registered exclusively within the app.
 - **Profile Management**: Staff can upload an avatar and update their name and password.
 
-  #### **Dashboard**
+#### **Dashboard**
 
 - **Daily Tasks**: View daily operations like guest check-ins and check-outs with actionable tasks.
 - **Statistics**:
@@ -46,7 +46,7 @@ I built this project to deepen my understanding of building feature-rich admin p
 
 ---
 
-### **🛠 Tech Stack**
+## **🛠 Tech Stack**
 
 - **Frontend**: React, React Router, styled-components
 - **State Management**: React Query, Context API
