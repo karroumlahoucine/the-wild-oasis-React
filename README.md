@@ -25,7 +25,7 @@ I built this project to deepen my understanding of building feature-rich admin p
 #### **Cabin Management**
 
 - **Cabin Overview**: View a detailed table of cabins.
-- **Cabin Operations**: Create, update, delete, duplicate cabins, and upload cabin photos.
+- **Cabin Operations**: Create, update, delete, duplicate cabins, and upload cabin photo.
 
 #### **Booking Management**
 
